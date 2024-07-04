@@ -8,7 +8,7 @@
 </head>
 <body>
     <main>
-    <section>
+    <form>
         <h1>Registration Form</h1>
         <p>Please fill out this form with the required information</p>
         <form action="https://register-demo.freecodecamp.org" method="post"></form>
@@ -20,34 +20,36 @@
         </fieldset>
         
         <fieldset>
-            <legend>Account type(required)</legend>
+            <legend>Account type (required) </legend>
             <label><input checked type="radio" id="Personal" value="Personal" name="Personal-Business"> Personal </label>
             <label><input type="radio" id="Business" value="Business" name="Personal-Business"> Business </label>
         </fieldset>
-        <fieldset></fieldset>
-        </section>
-    <section>
         
-
-    </section>       
-    <section>
-        <p>Upload a profile picture:</p>
-        <label><input type="file" value="Choose File" id="File" name="File"></label>
-        <p>Input your age(years):</p>
-        <label><input type="text" name="Age"></label>
-        <p>How did you hear about us?</p>
-        <label>
-            <input type="search">
-        </label>
-        <p>Provide a bio</p>
-        <label><input type="text" name="bio" placeholder="I like coding on the beach..."></label>
+        <fieldset>
+            <label for="profile-picture" >Upload a profile picture: <input type="file" id="profile-picture" /></label>
+            <label for="age" >Input your age (years): <input type="number" min="13" max="120" id="age" ></label>
+            <label for="referrer">How did you hear about us?
+              <select id="referrer" >
+                <option value="">(select one)</option>
+                <option value="1">freeCodeCamp News</option>
+                <option value="2">freeCodeCamp YouTube Channel</option>
+                <option value="3">freeCodeCamp Forum</option>
+                <option value="4">Other</option>
+              </select>
+            </label>
+            <label for="bio" >Provide a bio:
+              <textarea id="bio" rows="3" cols="30" placeholder="I like coding on the beach..." ></textarea>
+            </label>
+          </fieldset>
+        
     </section>
 
-<section>
-    <input type="checkbox" id="Terms and conditions" name="Terms and conditions" value="Terms and conditions">I accept the <a href="www.google.com">Terms and conditions</a>
-
+    
+    <label for="terms-and-conditions">
+        <input id="terms-and-conditions" type="checkbox" required /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+      </label>
     <input type="submit" value="Submit"/>
-</section>    
+</form>
 </main>
 </body>
 </html>
